@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+
+    <section class="mt-0">
+        <p>Bài 1</p>
+        <p>A function that is triggered when the user releases a key in the field import. The function outputs the actual key/letter published inside the text field version.</p>
+        <div class="flex gap-3">
+            <div>
+                <label for="fusername">Enter your name</label>
+                <input type="number" name="fname" id="fname" onkeyup="myFuncEx1()">
+            </div>
+            <div>
+                <label for="fusername">Enter your name</label>
+                <input type="number" name="fusername" id="fusername" onkeyup="myFuncEx1()">
+            </div>
+        </div>
+        <p class="mt-3">My name is: <span id="result">0</span></p>
+    </section>
+
+    <section>
+        <p>Bài 2</p>
+        <p>Kiểm tra số chẵn lẻ</p>
+        <div class="flex gap-3">
+            <div>
+                <label for="numberCheck">Nhập số của bạn</label>
+                <input type="number" name="numberCheck" id="numberCheck" onkeyup="myFuncEx2()">
+            </div>
+        </div>
+        <p class="mt-3">Số của bạn là: <span id="result2">---</span></p>
+    </section>
+
+    <section>
+        <p>Bài 3</p>
+        <p>Kiểm tra tuổi</p>
+        <div class="flex gap-3">
+            <div>
+                <label for="fusername">Nhập ngày tháng năm sinh của bạn</label>
+                <input type="date" name="date" id="date" onchange="myFuncEx3(event)">
+            </div>
+        </div>
+        <p class="mt-3" id="result3"></p>
+    </section>
+
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <h1 class="text-3xl border-b border-black pb-6 text-center">
+        Product card
+        <a href="./index.html" class="text-sm ml-2">New Product</a>
+    </h1>
+    <form name="cFrm" class="container mx-auto">
+        <div class="grid grid-cols-3">
+            <div>
+                <label for="productCardName">Product Name</label>
+                <input type="text" name="productCardName" id="productCardName" class="border border-black mt-2" />
+            </div>
+            <div>
+                <label for="productCardImage">Product Image</label>
+                <input type="file" name="productCardImage" id="productCardImage" class="mt-2" />
+            </div>
+            <div>
+                <label for="productCardPrice">Product Price</label>
+                <input type="number" name="productCardPrice" id="productCardPrice" class="border border-black mt-2" />
+            </div>
+        </div>
+        <div class="flex mt-5 gap-3">
+            <button 
+                type="button" 
+                class="text-white px-2.5 rounded-lg py-1 bg-green-400" 
+                onclick="handleAddProduct()"
+            >
+                Add
+            </button>
+            <button 
+                type="button" 
+                class="text-white px-2.5 rounded-lg py-1 bg-red-400"
+                onclick="handleResetCardState()"
+            >
+                Cancel
+            </button>
+        </div>
+    </form>
+    <div class="container mx-auto">
+        <h2 class="mt-5 text-2xl font-semibold">Điện thoại nổi bật nhất</h2>
+        <ul class="grid grid-cols-4 mt-4 gap-2.5" id="listProductCard"></ul>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
