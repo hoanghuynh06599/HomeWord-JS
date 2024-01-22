@@ -39,6 +39,7 @@ const handleSell = () => {
                 </td>
             </tr>
         `;
+        
         tbodyTag.appendChild(trTag);
         handleResetState();
     }
