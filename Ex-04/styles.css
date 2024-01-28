@@ -1,0 +1,7 @@
+.right-side-traffic-light {
+    clip-path: circle(98.5% at 1% 1%);
+}
+
+.left-side-traffic-light {
+    clip-path: circle(98.5% at 100% 0);
+}

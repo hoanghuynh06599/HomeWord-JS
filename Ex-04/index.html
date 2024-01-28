@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body class="w-screen h-screen flex items-center justify-center">
+    <div class="w-[400px] h-[600px] bg-black rounded-3xl relative">
+        <div class="absolute w-28 h-28 right-side-traffic-light left-full top-[15%] -translate-y-[15%] bg-black"></div>
+        <div class="absolute w-28 h-28 right-side-traffic-light left-full top-1/2 -translate-y-1/2 bg-black"></div>
+        <div class="absolute w-28 h-28 right-side-traffic-light left-full bottom-[10%] translate-y-[-10%] bg-black">
+        </div>
+
+        <div class="absolute w-28 h-28 left-side-traffic-light right-full top-[15%] -translate-y-[15%] bg-black"></div>
+        <div class="absolute w-28 h-28 left-side-traffic-light right-full top-1/2 -translate-y-1/2 bg-black"></div>
+        <div class="absolute w-28 h-28 left-side-traffic-light right-full bottom-[10%] translate-y-[-10%] bg-black">
+        </div>
+
+        <ul class="absolute right-1/2 translate-x-1/2 top-10 space-y-10">
+            <li class="w-36 h-36 bg-red-500 opacity-20 rounded-full" id="light" data-light="red"></li>
+            <li class="w-36 h-36 bg-yellow-400 opacity-20 rounded-full" id="light" data-light="yellow"></li>
+            <li class="w-36 h-36 bg-green-500 rounded-full" id="light" data-light="green"></li>
+        </ul>
+    </div>
+    <ul class="ml-52">
+        <li>
+            <button 
+                type="button"
+                class="focus:outline-none text-white bg-red-500 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
+                onclick="handleChangeLight({lightValue: 'red'})"
+            >
+                Red
+            </button>
+        </li>
+        <li>
+            <button 
+                type="button"
+                class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
+                onclick="handleChangeLight({lightValue: 'yellow'})"
+            >
+                Yellow
+            </button>
+        </li>
+        <li>
+            <button 
+                type="button"
+                class="focus:outline-none text-white bg-green-500 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
+                onclick="handleChangeLight({lightValue: 'green'})"
+            >
+                Green
+            </button>
+        </li>
+        
+    </ul>
+    <script src="./app.js"></script>
+</body>
+
+</html>
