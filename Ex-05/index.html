@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body class="pb-20">
+    <nav class="container mx-auto flex items-center justify-start py-3">
+        <div class="flex items-center gap-3">
+            <img src="https://res.cloudinary.com/dsziocv6v/image/upload/v1707967907/brand_b6lyaa.jpg" alt="logo"
+                class="w-10 h-10 rounded-md" />
+            <p class="text-base">Shop DEBUG</p>
+        </div>
+        <ul class="flex items-center flex-1 justify-center gap-3.5">
+            <li class="cursor-pointer">
+                <a href="#">Trang chủ</a>
+            </li>
+            <li class="cursor-pointer">
+                <a href="#men">Thời trang nam</a>
+            </li>
+            <li class="cursor-pointer">
+                <a href="#women">Thời trang nữ</a>
+            </li>
+            <li class="cursor-pointer">
+                <a href="#news">Tin tức</a>
+            </li>
+        </ul>
+        <div>
+            <input type="text" placeholder="Tìm kiếm..."
+                class="px-3 py-1.5 border border-slate-600 rounded-md outline-none text-base" />
+            <button class="border border-red-500 px-3 py-1.5 text-red-500 rounded-md text-base">Tìm kiếm</button>
+        </div>
+    </nav>
+
+    <section class="container mx-auto">
+        <h1 class="mt-10 text-3xl text-center uppercase font-medium text-red-600">Thời trang nữ</h1>
+        <ul class="grid grid-cols-4 gap-5 mt-12" id="women"></ul>
+    </section>
+
+    <section class="container mx-auto mt-20">
+        <h1 class="mt-10 text-3xl text-center uppercase font-medium text-red-600">Thời trang nam</h1>
+        <ul class="grid grid-cols-4 gap-5 mt-12" id="men"></ul>
+    </section>
+
+    <section class="container mx-auto mt-20">
+        <h1 class="mt-10 text-3xl text-center uppercase font-medium text-red-600">Tin tức</h1>
+        <ul class="grid grid-cols-2 gap-5 mt-12" id="news"></ul>
+    </section>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
 </head>
+<body class="container mx-auto">
+    <nav class="flex items-center justify-between mt-4 mb-10">
+        <div class="flex items-center gap-4">
+            <img src="./assets/imgs/logo.jpg" alt="" class="w-10 h-10 rounded-full" />
+            <p>Shop DEBUG</p>
+        </div>
 
-<body class="w-screen h-screen flex items-center justify-center">
-    <textarea id="fake-paragraph" class="hidden">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus quod optio repellendus impedit dolores veritatis assumenda modi molestiae corrupti! Sed enim modi eos quam, unde, aliquam quas at natus esse sequi iure possimus quo tenetur assumenda dolor deleniti suscipit ea magnam, debitis eaque vero dicta. Ratione eveniet non aut voluptatum obcaecati vel assumenda unde, nam laboriosam et labore aspernatur! Maiores totam excepturi molestiae architecto iste aspernatur quos alias fugit ratione dolor ipsa nulla, qui dolorem ullam vitae deserunt officiis quam neque. At culpa impedit dolor quas vitae accusamus. Ipsam vitae suscipit culpa, ratione quae numquam fugiat voluptates reiciendis iusto reprehenderit! Reprehenderit eos, illum consectetur minus iste deleniti numquam accusamus odio similique hic cum cupiditate rerum atque vitae voluptates autem quasi! Similique voluptates repellat dolorum nesciunt! Suscipit nulla saepe voluptatum at error provident ipsam? Esse, hic officia? Accusamus, ut excepturi incidunt quae sed debitis id. Possimus tempora eius aut obcaecati officiis. Eius molestiae necessitatibus atque sequi voluptate laboriosam nemo? Similique id aliquam animi. Similique autem maiores explicabo eius laboriosam non tempora quaerat quo officia, eum voluptatibus, sint libero quasi accusamus voluptatem, veritatis soluta? Facere numquam, alias distinctio sequi molestiae, enim, dicta accusamus perspiciatis voluptatem est modi et reiciendis ipsum! Soluta.
-    </textarea>
-    <ul class="grid grid-cols-10 gap-10" id="list-render"></ul>
+        <ul class="flex items-center justify-center gap-4">
+            <li>Trang chủ</li>
+            <li>Thời trang nam</li>
+            <li>Thời trang nữ</li>
+            <li>Tin tức</li>
+        </ul>
+
+        <div>
+            <input type="text" placeholder="Tìm kiếm ..." class="border border-slate-500 rounded-md py-1.5 px-2" />
+            <button class="py-1.5 px-2 border border-red-500 rounded-md text-red-500">Tìm kiếm</button>
+        </div>
+    </nav>
+
+    <main>
+        <h3 class="mb-8 text-center text-2xl text-red-600 uppercase font-semibold">Thời trang nữ</h3>
+        <ul class="grid grid-cols-4" id="menZone">
+            <li class="col-1 border border-slate-500 rounded-md overflow-hidden">
+                <img src="./assets/imgs/product-1.jpg" alt="">
+                <div class="p-4">
+                    <strong>Quần jean</strong>
+                    <p class="flex items-center justify-between">
+                        <span>269.000 VNĐ</span>
+                        <span class="line-through">370.000 VNĐ</span>
+                    </p>
+                    <button class="mt-5 px-3 py-2 bg-red-500 text-white rounded-md">
+                        Đặt mua
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </main>
     <script src="./app.js"></script>
 </body>
-
 </html>
