@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body class="container mx-auto pt-10">
+    <form action="#" name="productInfo" class="space-y-3 pb-3" >
+        <div class="flex items-center gap-5">
+            <label for="fullName" class="w-48">Fullname_Customer</label>
+            <input type="text" id="fullName" name="fullName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Huỳnh Huy Hoàng" required />
+        </div>
+        <div class="flex items-center gap-5">
+            <label for="productId" class="w-48">ID_Pro</label>
+            <input type="text" id="productId" name="productId" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="79" required  />
+        </div>
+        <div class="flex items-center gap-5">
+            <label for="productName" class="w-48">Pro_Name</label>
+            <input type="text" id="productName" name="productName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Dép" required  />
+        </div>
+        <div class="flex items-center gap-5">
+            <label for="productQuantity" class="w-48">Pro_Quantity</label>
+            <input type="number" id="productQuantity" name="productQuantity" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="10" required  />
+        </div>
+        <div class="flex items-center gap-5">
+            <label for="productPrice" class="w-48">Pro_Price</label>
+            <input type="number" id="productPrice" name="productPrice" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="100" required  />
+        </div>
+        <div class="flex items-center gap-5">
+            <label for="discount" class="w-48">Discount</label>
+            <input type="number" id="discount" name="discount" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="10" required  />
+        </div>
+    </form>
+    <div>
+        <button onclick="handleAddProduct()" class="py-2 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100">Save</button>
+        <button onclick="handleRenderProduct()" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100">Show</button>
+        <button onclick="handelReset()" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100">Reset</button>
+    </div>
+
+    <!-- Table -->
+
+
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-10">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        Auto_increment
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Fullname_Customer
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        ID_Pro
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Name_Pro
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Quantity_Pro
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Price_Pro
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Discount
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Amount
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Total
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="product-table"></tbody>
+        </table>
+    </div>
+
+
+    <script src="../app.js"></script>
+</body>
+
+</html>
