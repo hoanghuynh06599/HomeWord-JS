@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    html {
+        scroll-padding-top: 7rem;
+        scroll-behavior: smooth;
+    }
+</style>
+
+<body class="pb-20" onload="handleGetDetail()">
+    <nav class="container mx-auto flex items-center justify-start py-3">
+        <div class="flex items-center gap-3">
+            <img src="https://res.cloudinary.com/dsziocv6v/image/upload/v1707967907/brand_b6lyaa.jpg" alt="logo"
+                class="w-10 h-10 rounded-md" />
+            <p class="text-base">Shop DEBUG</p>
+        </div>
+        <ul class="flex items-center flex-1 justify-center gap-3.5"></ul>
+        <div>
+            <input type="text" placeholder="Tìm kiếm..."
+                class="px-3 py-1.5 border border-slate-600 rounded-md outline-none text-base" />
+            <button class="border border-red-500 px-3 py-1.5 text-red-500 rounded-md text-base">Tìm kiếm</button>
+        </div>
+    </nav>
+
+    
+    <section class="container mx-auto mt-20 flex gap-10">
+        <div class="flex-1 max-w-1/2">
+            <img 
+                src="https://pbs.twimg.com/media/GJcQTyNa8AAWlqy?format=jpg&name=large" 
+                alt=""
+                id="imgDetail"
+                class="w-full"
+            >
+        </div>
+        <div class="flex-1">
+            <h2 class="text-2xl font-semibold mb-8" id="nameDetail">Lorem ipsum dolor sit.</h2>
+            <div class="flex gap-20">
+                <span class="text-lg line-through" id="oldPriceDetail">12.000đ</span>
+                <span class="text-lg " id="newPriceDetail">12.000đ</span>
+            </div>
+        </div>
+    </section>
+    <script src="./data.js"></script>
+</body>
+
+</html>

@@ -102,6 +102,9 @@ const handleRenderProducts = () => {
             <td class="px-6 py-4">
                 <p class="inline-block mr-3 text-blue-500 cursor-pointer" onclick="handleSetProductToUpdate(${item.id})">Edit</p>
                 <p class="inline-block text-red-500 cursor-pointer" onclick="handleDeleteProduct(${index})">Delete</p>
+                <p class="inline-block text-red-500 cursor-pointer">
+                    <a href="/detail.html?id=${item.id}">Detail</a>
+                </p>
             </td>
         `
         // Nhét cái thẻ tr (đã chứa html vào thẻ tbody)
@@ -198,6 +201,16 @@ const handleDeleteProduct = (productID) => {
     handleRenderProducts()
 }
 
+const handleGetDetail = () => {
+    const query = new URLSearchParams(window.location.search)
+    const product = products.find(product => product.id === Number(query.get("id")))
+    console.log({product});
+    document.getElementById("imgDetail").src = product.image
+    document.getElementById("nameDetail").innerHTML = product.code + "-" + product.name
+    document.getElementById("oldPriceDetail").innerHTML = product.oldPrice
+    document.getElementById("newPriceDetail").innerHTML = product.newPrice
+}
+
 // Khi html được hiện thị xong thì gọi cái hàm handleRenderProducts()
 // Về cơ bản DOMContentLoaded = onload
-document.addEventListener('DOMContentLoaded', handleRenderProducts)
+// document.addEventListener('DOMContentLoaded', handleRenderProducts)
